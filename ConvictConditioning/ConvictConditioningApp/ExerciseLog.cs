@@ -4,7 +4,7 @@ namespace ConvictConditioningApp
     public class ExerciseLog
     {
         public string Name { get; set; }
-        private readonly int Lvl;
+        public readonly int Lvl;
         public List<int> Reps { get; set; } = new List<int>();
 
         public ExerciseLog(string name, int lvl)

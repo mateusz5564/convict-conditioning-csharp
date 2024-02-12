@@ -21,8 +21,9 @@ while (exitApp != true)
     switch (input)
     {
         case "1":
-            var pushupsGroup = new PushupsGroup();
-            pushupsGroup.Menu();
+            var pushupsGroup = new ExerciseGroup("Pushups", "pushups.txt", ExercisesLists.Pushups);
+            var exerciseGroupMenu = new ExerciseGroupMenu(pushupsGroup);
+            exerciseGroupMenu.StartMenu();
             break;
         case "2":
             break;
@@ -37,10 +38,9 @@ while (exitApp != true)
         case "q":
             exitApp = true;
             break;
-        default: 
+        default:
             Console.WriteLine("Incorrect input, (1-6) or q to quit");
             break;
     }
 }
-
 
