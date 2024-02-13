@@ -20,34 +20,22 @@ while (exitApp != true)
     switch (input)
     {
         case "1":
-            var pushupsGroup = new ExerciseGroup("Pushups", "pushups.txt", ExercisesLists.Pushups);
-            var pushupsGroupMenu = new ExerciseGroupMenu(pushupsGroup);
-            pushupsGroupMenu.StartMenu();
+            StartExerciseGroupMenu("Pushups", "pushups", ExercisesLists.Pushups);
             break;
         case "2":
-            var squatsGroup = new ExerciseGroup("Squats", "squats.txt", ExercisesLists.Squats);
-            var squatsGroupMenu = new ExerciseGroupMenu(squatsGroup);
-            squatsGroupMenu.StartMenu();
+            StartExerciseGroupMenu("Squats", "squats", ExercisesLists.Squats);
             break;
         case "3":
-            var pullupsGroup = new ExerciseGroup("Pullups", "pullups.txt", ExercisesLists.Pullups);
-            var pullupsGroupMenu = new ExerciseGroupMenu(pullupsGroup);
-            pullupsGroupMenu.StartMenu();
+            StartExerciseGroupMenu("Pullups", "pullups", ExercisesLists.Pullups);
             break;
         case "4":
-            var legRaisesGroup = new ExerciseGroup("Leg Raises", "legRaises.txt", ExercisesLists.LegRaises);
-            var legRaisesGroupMenu = new ExerciseGroupMenu(legRaisesGroup);
-            legRaisesGroupMenu.StartMenu();
+            StartExerciseGroupMenu("Leg Raises", "legRaises", ExercisesLists.LegRaises);
             break;
         case "5":
-            var bridgesGroup = new ExerciseGroup("Bridges", "bridges.txt", ExercisesLists.Bridges);
-            var bridgesGroupMenu = new ExerciseGroupMenu(bridgesGroup);
-            bridgesGroupMenu.StartMenu();
+            StartExerciseGroupMenu("Bridges", "bridges", ExercisesLists.Bridges);
             break;
         case "6":
-            var handstandPushupsGroup = new ExerciseGroup("Handstand Pushups", "handstandPushups.txt", ExercisesLists.HandstandPushups);
-            var handstandPushupsGroupMenu = new ExerciseGroupMenu(handstandPushupsGroup);
-            handstandPushupsGroupMenu.StartMenu();
+            StartExerciseGroupMenu("Handstand Pushups", "handstandPushups", ExercisesLists.HandstandPushups);
             break;
         case "q":
             exitApp = true;
@@ -58,3 +46,10 @@ while (exitApp != true)
     }
 }
 
+void StartExerciseGroupMenu(string groupName, string filename, List<Exercise> exerciseList)
+{
+    var groupFileName = $"{filename}.txt";
+    var exerciseGroup = new ExerciseGroup(groupName, groupFileName, exerciseList);
+    var exerciseGroupMenu = new ExerciseGroupMenu(exerciseGroup);
+    exerciseGroupMenu.StartMenu();
+}
