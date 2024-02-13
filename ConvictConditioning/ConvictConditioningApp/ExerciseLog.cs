@@ -9,15 +9,15 @@ namespace ConvictConditioningApp
 
         public ExerciseLog(string name, int lvl)
         {
-            Name = name;
-            Lvl = lvl;
+            this.Name = name;
+            this.Lvl = lvl;
         }
 
         public ExerciseLog(string name, int lvl, List<int> reps)
         {
-            Name = name;
-            Lvl = lvl;
-            Reps = reps;
+            this.Name = name;
+            this.Lvl = lvl;
+            this.Reps = reps;
         }
 
         public string ToFileLine()

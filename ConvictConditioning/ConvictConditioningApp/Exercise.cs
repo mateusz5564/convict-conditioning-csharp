@@ -5,11 +5,11 @@ namespace ConvictConditioningApp
     {
         public Exercise(string name, int lvl, string beginner, string intermediate, string progression)
         {
-            Name = name;
-            Lvl = lvl;
-            Beginner = beginner;
-            Intermediate = intermediate;
-            Progression = progression;
+            this.Name = name;
+            this.Lvl = lvl;
+            this.Beginner = beginner;
+            this.Intermediate = intermediate;
+            this.Progression = progression;
         }
 
         public string Name { get; set; }

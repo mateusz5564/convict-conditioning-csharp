@@ -26,6 +26,7 @@ namespace ConvictConditioningApp
                     throw new ArgumentException("Reps list is empty!");
                 }
                 writer.WriteLine(exerciseLog.ToFileLine());
+                ExerciseLogs.Add(exerciseLog);
             }
         }
 

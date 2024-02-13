@@ -104,6 +104,10 @@ namespace ConvictConditioningApp
             var logs = _exerciseGroup.ExerciseGroupStats.GetLatestFiveLogs();
 
             Console.WriteLine("Latest exercise logs: ");
+            if (logs.Count == 0)
+            {
+                Console.WriteLine("You have no logs yet.");
+            }
             foreach (var log in logs)
             {
                 Console.WriteLine($"{log.Name} (lvl {log.Lvl}) -> {String.Join(" ", log.Reps)}");
